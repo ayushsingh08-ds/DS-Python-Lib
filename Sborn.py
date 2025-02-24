@@ -28,3 +28,16 @@ sns.pairplot(tips_df,hue='sex',palette='Reds')
 tips_df= sns.load_dataset('tips')
 sns.rugplot(tips_df['total_bill'])
 
+#Styling
+sns.set_style('darkgrid')
+#sns.set_context('paper',font_scale=1.5)
+sns.jointplot(x='speeding',y= 'alcohol',data =crash_df,kind='reg')
+sns.despine(left=False)
+
+#Category Plot
+#Bar Plot
+sns.barplot(x='sex' , y = 'total_bill', data = tips_df, estimator = 'std',color='red')
+
+#Count Plot
+sns.countplot(x='sex' , data = tips_df)
+
